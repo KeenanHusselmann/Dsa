@@ -1,0 +1,83 @@
+### 1 . Add a new programme
+POST http://localhost:9090/programme-development/programmes
+content-type: application/json
+
+{
+    "registrationDate": {
+        "year": 2024,
+        "month": 02,
+        "day": 05
+    },
+    "programmeCode": "CS106",
+    "title": "Bachelor of Computer Science",
+    "nqfLevel": 6,
+    "faculty": "Computing & Informatics",
+    "department": "Software Development",
+    "courses": [
+
+        {   "programmeCode":"CS101",
+            "courseName": "Introduction to Programming",
+            "courseCode": "ITP512S",
+            "nqfLevel": 6
+        },
+        {   "programmeCode":"CS101",
+            "courseName": "Data Structures",
+            "courseCode": "DSA512S",
+            "nqfLevel": 7
+        }
+    ]
+}
+
+### 2. Retrieves a list of all programmes
+GET http://localhost:9090/programme-development/programmes
+
+
+### 3. Update an existing programme by programme code
+PUT http://localhost:9090/programme-development/programmes/CSA101
+Content-Type: application/json
+
+{
+    "registrationDate": {
+        "year": 2012,
+        "month": 2,
+        "day": 5
+    },
+    "programmeCode": "CSA101",
+    "title": "Bachelo of Computer Science Updated",
+    "nqfLevel": 7,
+    "faculty": "Computing & Informatics Updated",
+    "department": "Software Development Updated",
+    "courses": [
+        {
+            "programmeCode": "CSA101",
+            "courseCode": "ITP512S",
+            "courseName": "Introduction to Programming Updated",
+            "nqfLevel": 6
+        }
+    ]
+}
+
+
+### 4. Retrieve a specific programme by specifying the programme code
+GET http://localhost:9090/programme-development/programmes/BA102
+
+
+
+### 5. Delete a programme by programme code
+DELETE http://localhost:9090/programme-development/programmes/BA102
+
+
+
+### 6.retrieve all programmes due for review(AFTER 5 YEARS)
+GET http://localhost:9090/programme-development/programmes/dueForReview
+
+
+### 7.retrieve programmes that belong to same faculty
+GET http://localhost:9090/programme-development/programmes/faculty/Computing%20&%20Informatics
+
+
+
+
+
+
+

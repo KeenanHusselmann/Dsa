@@ -1,0 +1,9 @@
+[package]
+org = "dsaGroupProject"
+name = "programme_development_unit"
+version = "0.1.0"
+distribution = "2201.9.2"
+
+[build-options]
+observabilityIncluded = true
+
